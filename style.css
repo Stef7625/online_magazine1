@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&family=Montserrat:wght@500&family=Sora:wght@300;500&family=Spectral&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --grey: #ECECEC;
+    --blue: #90CCF4;
+    --red: #F78888;
+    --green: #386641;
+    --beige: #EBEBD3;
+    --black: #182628;
+    --white: #FEFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header --> */
+
+header {
+    width: 100%;
+    background-color: var(--grey);
+    position: fixed;
+    z-index: 100;
+}
+
+header nav {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-family: 'Sora', sans-serif;
+}
+
+header .logo img {
+    max-height: 80px;
+    width: auto;
+}
+
+header .logotext {
+    font-family: 'Spectral', serif;
+    font-size: 2.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    right: 90px;
+}
+
+header nav a {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--black);
+}
+
+.subscribe {
+    background-color: var(--black);
+    padding: 10px;
+    color: var(--white);
+}
+
+/* Main --> */
+
+main {
+    width: 100%;
+    background-color: var(--white);
+}
+
+main section {
+    display: flex;
+}
+
+/* Main --> Call-To-Action / Hero-section --> */
+
+.cta {
+    padding-top: 114px;
+    justify-content: center;
+    background-color: var(--black);
+}
+
+.cta a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10pt;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.1ch;
+    margin: 15px;
+    padding-right: 120px;
+    padding-left: 120px;
+    border-top: 4px dashed var(--red);
+    border-bottom: 4px dashed var(--blue);
+}
+
+/* Main --> Sidebar venstre side --> */
+
+.sidebar {
+    background-color: var(--white);
+    flex: 0.50;
+    text-align: center;
+}
+
+.sidebar h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 1.5;
+    border-bottom: 2px solid var(--black);
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.sidebar ul {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-family: 'Sora', sans-serif;
+    line-height: 2.5;
+    display: inline-block;
+    position: relative;
+}
+
+.sidebar ul li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--black);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.sidebar ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Main --> Blå og rød boks --> */
+
+.bluebox {
+    background-color: var(--blue);
+    flex: 1;
+    text-align: center;
+}
+
+.redbox {
+    background-color: var(--red);
+    flex: 1;
+    text-align: center;
+}
+
+.bluebox img, .redbox img {
+    max-width: 500px;
+    height: auto;
+    margin-top: 65px;
+    border-radius: 4px;
+    padding-top: 30px;
+}
+
+.bluebox h2, .redbox h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 15px;
+    position: relative;
+    bottom: 60px;
+    color: var(--white);
+    text-shadow: rgb(24, 38, 40) 2px 0px 0px, rgb(24, 38, 40) 1.75px 0.953125px 0px, rgb(24, 38, 40) 1.078125px 1.671875px 0px, rgb(24, 38, 40) 0.140625px 1.984375px 0px, rgb(24, 38, 40) -0.828125px 1.8125px 0px, rgb(24, 38, 40) -1.59375px 1.1875px 0px, rgb(24, 38, 40) -1.96875px 0.28125px 0px, rgb(24, 38, 40) -1.859375px -0.6875px 0px, rgb(24, 38, 40) -1.296875px -1.5px 0px, rgb(24, 38, 40) -0.40625px -1.953125px 0px, rgb(24, 38, 40) 0.5625px -1.90625px 0px, rgb(24, 38, 40) 1.40625px -1.40625px 0px, rgb(24, 38, 40) 1.90625px -0.546875px 0px;
+    border-radius: 4px;
+}
+
+.bluebox h2 {
+    background-color: var(--red);
+}
+
+.redbox h2 {
+    background-color: var(--blue);
+}
+
+.bluebox a, .redbox a {
+    text-decoration: none;
+}
+
+/* Main --> Om os sektion --> */
+
+.about {
+    display: block;
+    background-color: var(--beige);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.about h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    margin-top: 0;
+}
+
+.contentwrapper {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    gap: 150px;
+}
+
+.contentwrapper img {
+    max-width: 400px;
+    height: auto;
+}
+
+.contentwrapper p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.textwrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.textwrapper p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.textwrapper a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Main --> Grøn sektion --> */
+
+.videocontainer {
+    background-color: var(--green);
+    flex: 1;
+}
+
+.textsection {
+    background-color: var(--green);
+    flex: 1;
+}
+
+.videocontainer h1, .textsection h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    text-shadow: rgb(24, 38, 40) 2px 0px 0px, rgb(24, 38, 40) 1.75px 0.953125px 0px, rgb(24, 38, 40) 1.078125px 1.671875px 0px, rgb(24, 38, 40) 0.140625px 1.984375px 0px, rgb(24, 38, 40) -0.828125px 1.8125px 0px, rgb(24, 38, 40) -1.59375px 1.1875px 0px, rgb(24, 38, 40) -1.96875px 0.28125px 0px, rgb(24, 38, 40) -1.859375px -0.6875px 0px, rgb(24, 38, 40) -1.296875px -1.5px 0px, rgb(24, 38, 40) -0.40625px -1.953125px 0px, rgb(24, 38, 40) 0.5625px -1.90625px 0px, rgb(24, 38, 40) 1.40625px -1.40625px 0px, rgb(24, 38, 40) 1.90625px -0.546875px 0px;
+    margin-top: 60px;
+    line-height: 1.4;
+}
+
+.videocontainer h1 {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.videocontainer video {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    border: 3px solid var(--black);
+}
+
+.videocontainer p {
+    color: var(--white);
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.videocontainer p a {
+    color: var(--white);
+    font-family: 'Sora', sans-serif;
+    font-weight: bolder;
+}
+
+.textsection h1 {
+    margin-left: 58px;
+    margin-right: 158px;
+}
+
+.textsection p {
+    margin-left: 58px;
+    margin-right: 158px;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+/* Main --> Sidebox højre side --> */
+
+.infobox {
+    background-color: var(--white);
+    flex: 0.5;
+}
+
+.infobox h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 1.5;
+    border-bottom: 2px solid var(--black);
+}
+
+.infobox ul {
+    direction: rtl;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.infobox ul li {
+    color: var(--black);
+    font-family: 'Sora', sans-serif;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Footer --> */
+
+footer {
+    background-color: var(--grey);
+}
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 30px;
+}
+
+footer h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 16pt;
+    text-transform: uppercase;
+    padding-top: 20px;
+    border-bottom: 2px solid var(--black);
+}
+
+footer a {
+    color: var(--black);
+    text-decoration: none;
+    font-family: 'Sora', sans-serif;
+    line-height: 2.6;
+}
+
+footer section img {
+    position: relative;
+    top: 135px;
+}
+
+/* Artikler --> */
+
+.bluepillar {
+    background-color: var(--blue);
+    flex: 0.05;
+}
+
+.redpillar {
+    background-color: var(--red);
+    flex: 0.05;
+}
+
+article {
+    flex: 0.9;
+    padding-bottom: 40px;
+}
+
+article img {
+    max-width: 90vw;
+}
+
+article h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20pt;
+    text-decoration: underline;
+}
+
+article h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18pt;
+    margin-top: 70px;
+}
+
+article h3 {
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 10pt;
+    margin-top: 30px;
+    line-height: 1.4;
+}
+
+article h4 {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 12pt;
+    text-decoration: underline;
+    margin-top: 50px;
+}
+
+article h5 {
+    font-family: 'Sora', sans-serif;
+    font-size: 10pt;
+    margin-top: 40px;
+}
+
+article h6 {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 8pt;
+}
+
+article p {
+    font-family: 'Epilogue', sans-serif;
+    line-height: 1.6;
+}
+
+.textcontainer {
+    margin-left: 50px;
+    margin-top: 30px;
+    display: flex;
+    gap: 150px;
+}
+
+.flexone {
+    flex: 0.6;
+}
+
+.flextwo {
+    flex: 0.4;
+}
+
+.flextwo h4 {
+    margin-top: 148px;
+}
+
+.textmargin {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-right: 600px;
+}
+
+.textmargin ul li {
+    margin-bottom: 20px;
+}
+
+article ul li {
+    font-family: 'Epilogue', sans-serif;
+    line-height: 1.2;
+}
+
+.pmargintop {
+    margin-top: 50px;
+}
+
+.pmargintop a {
+    color: black;
+}
+
+.maintext {
+    flex: 0.6;
+    margin-left: 50px;
+}
+
+.subtext {
+    flex: 0.4;
+    margin-right: 50px;
+    margin-left: 100px;
+    margin-top: 166px;
+}
+
+.subtext ul {
+    margin-bottom: 460px;
+}
+
+.subtext ul li {
+    margin-bottom: 20px;
+}
+
+.subtext img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtext h6 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+article section h5, article .textmargin h5 {
+    font-size: 12pt;
+}
